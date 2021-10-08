@@ -1,0 +1,769 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap');
+
+/* ////////// BARRA DE ROLAGEM \\\\\\\\\\ */
+::-webkit-scrollbar-track {
+    background-color: #18181a;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #726fb3;
+    border-radius: 25px;
+}
+/* ////////// FIM BARRA DE ROLAGEM \\\\\\\\\\ */
+
+#jokespar .msg {
+    width: 350px;
+    height: 100px;
+    background: #726fb3;
+    border-bottom: 10px solid #3b2c63;
+    margin-top: 100px;
+    position: fixed;
+    z-index: 5;
+    float: right;
+    overflow: hidden;
+}
+
+/* ////////// NAVBAR \\\\\\\\\\ */
+#jokespar header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 20px 20px;
+    z-index: 2;
+}
+
+#jokespar header .logo {
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+#jokespar header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#jokespar header ul li {
+    position: relative;
+    list-style: none;
+}
+
+#jokespar header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+
+#jokespar header ul li .dropdown {
+    padding: 0;
+    margin: 0;
+}
+
+#jokespar header ul li .dropdown button {
+    width: 100%;
+    background: #fff;
+    border-radius: 25px;
+    color: #000;
+    padding: 3px;
+}
+
+#jokespar header ul li .dropdown button img {
+    border-radius: 25px;
+}
+
+#jokespar header ul li .dropdown-menu a {
+    color: #000;
+}
+
+#jokespar header ul li .dropdown-menu a:hover {
+    background: transparent;
+}
+
+#jokespar header ul li .dropdown-menu label {
+    font-family: 'Bebas Neue', cursive;
+}
+
+#jokespar header ul li .dropdown input {
+    border: 2px solid #969696; 
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+    transition: 0.25s;
+}
+
+#jokespar header ul li .dropdown input:focus {
+    border-color: #6149a2;
+}
+
+#jokespar header ul li .dropdown input[type="submit"] {
+    border: 0;
+    padding: 5;
+    background: #6149a2;
+    color: #fff;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#jokespar header.sticky {
+    background: #2d3436;
+    padding: 10px;
+}
+#jokespar header.sticky .logo {
+    color: #fff;
+    margin-left: 10px;
+}
+
+#jokespar header.sticky ul li a {
+    color: #fff;
+    font-weight: 90;
+}
+
+#jokespar header.sticky ul li .dropdown-menu {
+    background: #202122;
+}
+
+#jokespar header.sticky ul li .dropdown-menu a {
+    color: #cacaca;
+}
+
+#jokespar header.sticky ul li .dropdown-menu a:hover {
+    background: transparent;
+    text-decoration: underline;
+    text-decoration-color: #726fb3;
+}
+
+#jokespar header.sticky ul li .dropdown-menu label {
+    color: #cacaca;
+}
+
+#jokespar header input[type="checkbox"] {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        background: none;
+    }   
+
+    #jokespar header ul {
+        display: block;
+    }
+
+    #jokespar header ul li {
+        list-style: initial;
+        margin-top: 50px;
+    }
+
+    #jokespar header.sticky ul li a {
+        color: #000;
+    }
+
+    #jokespar header ul li a {
+        color: #000;
+    }
+
+    #jokespar header ul li .dropdown button {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        width: 15%;
+    }
+
+    #jokespar header .control-nav {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      display: block;
+      width: 30px;
+      padding: 5px 0;
+      border: solid #fff;
+      border-width: 3px 0;
+      z-index: 2;
+      cursor: pointer;
+      transition: 0.6s;
+    }
+  
+    #jokespar header .control-nav:before {
+      content: "";
+      display: block;
+      height: 3px;
+      background: #ffffff;
+      transition: 0.6s;
+    }
+  
+    #jokespar header .control-nav-close {
+      position: fixed;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      z-index: 1;
+      background: rgba(0,0,0,0.4);
+      -webkit-transition: all 500ms ease;
+      transition: all 500ms ease;
+      -webkit-transform: translate(100%, 0);
+      -ms-transform: translate(100%, 0);
+      transform: translate(100%, 0);
+    }
+
+    #jokespar header.sticky .control-nav {
+        position: absolute;
+      right: 20px;
+      top: 20px;
+      display: block;
+      width: 30px;
+      padding: 5px 0;
+      border: solid #fff;
+      border-width: 3px 0;
+      z-index: 2;
+    }
+
+    #jokespar header.sticky .control-nav:before {
+        background: #fff;
+    }
+  
+    #jokespar header nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 250px;
+      border-left: 1px solid #ccc;
+      background: #fff;
+      overflow-x: auto;
+      z-index: 2;
+      -webkit-transition: all 500ms ease;
+      transition: all 500ms ease;
+      -webkit-transform: translate(100%, 0);
+      -ms-transform: translate(100%, 0);
+      transform: translate(100%, 0);
+    }
+
+    #control-nav:checked ~ .control-nav-close {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+      
+      #control-nav:checked ~ nav {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+  }
+/* ////////// FIM NAVBAR \\\\\\\\\\ */
+
+/* ============================== JOKE SPAR ============================== */
+/* ////////// INICIO \\\\\\\\\\ */
+#jokespar {
+    background: #1e1e21;
+}
+
+#jokespar #inicio {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    background: url(../img/jokespar/inicioBANNER.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#jokespar #inicio .jumbotron {
+    background: none;
+    margin-top: 35px;
+}
+
+#jokespar #inicio .jumbotron .conteudo h1 {
+    color: #fff;
+    font-size: 50px;
+    font-family: 'MuseoModerno', cursive;
+}
+
+#jokespar #inicio .jumbotron .conteudo h2 {
+    color: #fff;
+    font-family: 'MuseoModerno', cursive;
+    font-size: 25px;
+}
+
+#jokespar #inicio .jumbotron .conteudo hr {
+    border: 3px solid #fff;
+}
+
+@media (max-width: 1000px) {
+    #jokesapr #inicio {
+        min-height: 100vh;
+    }
+    #jokespar #inicio .conteudo,
+    #jokespar #inicio .wave {
+        display: none;
+    }
+}
+/* ////////// FIM INICIO \\\\\\\\\\ */
+
+/* ////////// SOBRE \\\\\\\\\\ */
+#jokespar #sobre {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: #18181a;
+}
+
+#jokespar #sobre h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+    color: #726fb3;
+    text-align: center;
+}
+
+#jokespar #sobre p {
+    font-family: 'Raleway', sans-serif;
+    color: #c0c0c0;
+}
+
+#jokespar #sobre .divUm {
+    position:relative;  
+}
+
+#jokespar #sobre .divDois {
+    position: absolute;
+    transform: rotate(-25deg);
+    top: 50px;
+}
+
+@media (max-width: 600px) {
+    #jokespar #sobre {
+        min-height: 130vh;
+    }
+    #jokespar #sobre h1 {
+        text-align: center;
+    }
+    #jokespar #sobre .divUm,
+    #jokespar #sobre .divDois {
+        display: none;
+    }
+}
+/* ////////// FIM SOBRE \\\\\\\\\\ */
+
+/* ////////// SERVIÇOS \\\\\\\\\\ */
+#jokespar #servicos {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+}
+
+#jokespar #servicos h1 {
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+#jokespar #servicos .card {
+    -webkit-box-shadow: 3px 18px 20px 2px rgba(0, 0, 0, 0.466);
+    -moz-box-shadow: 3px 18px 20px 2px rgba(0, 0, 0, 0.466);
+    box-shadow: 3px 18px 20px 2px rgba(0, 0, 0, 0.466);
+}
+
+#jokespar #servicos .card .btn-outline-info {
+    border-color: #726fb3;
+    color: #726fb3;
+}
+
+#jokespar #servicos .card .btn-outline-info:hover {
+    background: #726fb3;
+    color: #fff;
+}
+
+#jokespar #servicos .card .btn-outline-info:nth-child(2) {
+    cursor: not-allowed;
+}
+
+#jokespar #servicos .card .btn-outline-info:nth-child(2):hover {
+    background: #fff;
+    color: #726fb3;
+}
+
+#jokespar #servicos .card .textLog {
+    bottom: 0;
+    color: #aaaaaa;
+}
+
+@media (max-width: 1000px) {
+    #jokespar #servicos {
+        min-height: 200vh;
+    }
+}
+/* ////////// FIM SERVIÇOS \\\\\\\\\\ */
+
+/* ///////// CADASTRO \\\\\\\\\\ */
+#jokespar #cadastro {
+    height: 50vh;
+    background: url(../img/jokespar/contaBANNER.png) no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#jokespar #cadastro h1 {
+    font-family: 'Bebas Neue', cursive;
+    color: #fff;
+    background: none;
+}
+
+#jokespar #cadastro h4 {
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    background: none;
+    margin-top: -15px;
+}
+
+#jokespar #cadastro input[type="submit"] {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+    border: 0;
+    background: #fff;
+    border-radius: 5px;
+    width: 150px;
+    margin-top: 15px;
+}
+
+@media (max-width: 1000px) {
+    #jokespar #cadastro {
+        height: 45vh;
+        background: url(../img/jokespar/contaBANNERmobile.jpg);
+    }
+}
+/* ///////// FIM CADASTRO \\\\\\\\\\ */
+
+/* ///////// JOGOS SUPORTE \\\\\\\\\\ */
+#jokespar #jogosSuporte {
+    min-height: 65vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/jokespar/sobreBanner.jpg);
+}
+
+#jokespar #jogosSuporte h1 {
+    font-family: 'Bebas Neue', cursive;
+    color: #fff;
+    background: none;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#jokespar #jogosSuporte .card:nth-child(2) {
+    transform: scale(1.1);
+}
+
+#jokespar #jogosSuporte .card {
+    background: none;
+    border: none;
+    text-align: center;
+}
+
+#jokespar #jogosSuporte .card p {
+    color: #808080;
+}
+
+@media (max-width: 600px) {
+    #jokespar #jogosSuporte .card:nth-child(2) {
+        transform: scale(1);
+    }
+}
+/* ///////// FIM JOGOS SUPORTE \\\\\\\\\\ */
+
+/* ///////// PARCEIROS \\\\\\\\\\ */
+#jokespar #parceiros {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 70vh;
+}
+
+#jokespar #parceiros h1 {
+    text-align: center;
+    color: #fff;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#jokespar #parceiros hr {
+    border-color: #fff;
+}
+
+#jokespar #parceiros .card  {
+    background: none;
+    border: 0;
+}
+
+#jokespar #parceiros .card h5 {
+    color: #726fb3;
+    font-size: 30px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+#jokespar #parceiros .card p {
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+#jokespar #parceiros .card .card-group {
+	position: absolute;
+	bottom: 0;
+}
+
+#jokespar #parceiros .card .card-group .card {
+    border: 3px solid #1e1e21;
+}
+
+#jokespar #parceiros .card .social-media {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background: #0f0f0f;
+}
+
+#jokespar #parceiros .card .social-media i {
+    color: #c9c9c9;
+    margin: 25px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#jokespar #parceiros .card .social-media i:hover {
+    color: #726fb3;
+}
+
+#jokespar #parceiros .jumbotron {
+    background: none;
+}
+
+#jokespar #parceiros .jumbotron h1 {
+    color: #757575;
+    margin: 0;
+}
+
+#jokespar #parceiros .jumbotron h4 {
+    color: #757575;
+}
+#jokespar #parceiros .jumbotron a {
+    color: #535353;
+}
+
+@media (max-width: 1000px) {
+    #jokespar #parceiros .card {
+        border: 1px solid #fff;
+    }
+    #jokespar #parceiros .card h5 {
+        text-align: center;
+    }
+    #jokespar #parceiros hr {
+        display: none;
+    }
+    #jokespar #parceiros .card .social-media {
+        border-bottom: 1px solid #fff;
+        border-top: 1px solid #fff;
+    }
+    #jokespar #parceiros .card .card-group {
+        position: relative;
+    }
+    #jokespar #parceiros .card .card-group .card {
+        border: 1px solid #fff;
+    }
+}
+/* ///////// FIM PARCEIROS \\\\\\\\\\ */
+
+/* ///////// FAQ \\\\\\\\\\ */
+#jokespar #faq {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 50vh;
+}
+
+#jokespar #faq h1 {
+    text-align: center;
+    color: #fff;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#jokespar #faq .accordion {
+    margin-bottom: 20px;
+}
+
+#jokespar #faq .card {
+    background: #383838;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#jokespar #faq .card:hover {
+    background: #2c2c2c;
+}
+
+#jokespar #faq .card button {
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#jokespar #faq .card button .titulo {
+    display: flex;
+    align-items: center;
+}
+
+#jokespar #faq .card button .titulo h1:nth-child(1) {
+    color: #726fb3;
+    font-size: 30px;
+}
+
+#jokespar #faq .card button .titulo h1:nth-child(2) {
+    color: #fff;
+    font-size: 30px;
+    margin-left: 35px;
+}   
+
+#jokespar #faq .card button .titulo i {
+    color: #726fb3;
+}
+
+#jokespar #faq .card .card-body {
+    color: #fff;
+}
+
+#jokespar #faq .card .card-body p {
+    margin-left: 80px;
+}
+
+#jokespar #faq .recado {
+    text-align: center;
+    color: #757575;
+}
+
+#jokespar #faq .recado a {
+    color: #726fb3;
+}
+
+@media (max-width: 1000px) {
+    #jokespar #faq {
+        min-height: 30vh;
+    }
+    #jokespar #faq .card {
+        border-color: #fff;
+    }
+    #jokespar #faq .card button {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #jokespar #faq .card button .titulo h1:nth-child(2) {
+        margin-left: 5px;
+    }
+    #jokespar #faq .card .card-body p {
+        margin-left: 0px;
+    }
+}
+/* ///////// FIM FAQ \\\\\\\\\\ */
+/* ============================== FIM JOKE SPAR ============================== */
+
+/* ////////// FOOTER \\\\\\\\\\ */
+#footer {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+    background: #2d3436;
+    color: #c9c9c9;
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+}
+
+#footer i {
+    color: #c9c9c9;
+    margin: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#footer i:hover {
+    color: #726fb3;
+}
+
+#footer hr {
+    border-color: #c9c9c9; 
+}
+
+#footer .empresas {
+    margin-bottom: 15px;
+}
+
+#footer .empresas a {
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    #footer {
+        min-height: 50vh;
+    }
+}
+/* ////////// FIM FOOTER \\\\\\\\\\ */

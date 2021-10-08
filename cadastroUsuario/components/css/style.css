@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ////////// MENSAGEM \\\\\\\\\\ */
+#mensagem .alerta {
+    background-color: #6149a2;
+    color: #d3d3d3;
+    transition: 0.25s;
+}
+/* ////////// FIM MENSAGEM \\\\\\\\\\ */
+
+/* ////////// QUADRADO PRINCIPAL \\\\\\\\\\ */
+.quadrado {
+    position: absolute;
+    background: #6149a2;
+    min-height: 75vh;
+    width: 80%;
+    border-bottom: 10px solid #6149a2;
+    border-radius: 10px;
+}
+/* ////////// FIM QUADRADO PRINCIPAL \\\\\\\\\\ */
+
+/* ////////// DIV ESQUERDA \\\\\\\\\\ */
+.esquerda {
+    background: url(../img/form-banner.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    float: left;
+    width: 50%;
+    min-height: 75vh;
+}
+/* ////////// FIM DIV ESQUERDA \\\\\\\\\\ */
+
+/* ////////// DIV DIREITA \\\\\\\\\\ */
+.direita {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2d2d2d;
+    float: right;
+    width: 50%;
+    min-height: 75vh;
+}
+
+.direita h1 {
+    display: none;
+}
+
+.direita input {
+    border: 2px solid #494949;
+    background: #494949;
+    border-radius: 5px;
+    color: #fff;
+    margin: 5px;
+    padding: 5px;
+    outline: none;
+    transition: 0.25s;
+}
+
+.direita input:focus {
+    border-color: #6149a2;
+    background: #141414;
+}
+
+.direita input::-webkit-input-placeholder {
+    color: #858585;
+}
+
+.direita input[type="submit"] {
+    background: #6149a2;
+    border-color: #6149a2;
+    width: 50%;
+    padding: 5px;
+}
+
+.direita p {
+    color: #d6d6d6;
+}
+
+@media (max-width: 1000px) {
+    .esquerda {
+        display: none;
+    }
+    .direita {
+        width: 100%;
+        float: none;
+    }
+    .direita h1 {
+        display: block;
+    }
+}
+/* ////////// FIM DIV DIREITA \\\\\\\\\\ */
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;    
+    background: #111111;
+    background-size: cover;
+    background-position: 50% 50%;
+}

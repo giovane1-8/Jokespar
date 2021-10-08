@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Raleway&display=swap');
+
+/* ////////// BARRA DE ROLAGEM \\\\\\\\\\ */
+::-webkit-scrollbar-track {
+    background-color: #18181a;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #726fb3;
+    border-radius: 25px;
+}
+
+/* ////////// FIM BARRA DE ROLAGEM \\\\\\\\\\ */
+
+/* ============================== RANK UP ============================== */
+/* ////////// NAVBAR \\\\\\\\\\ */
+#rankup header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 20px 20px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+#rankup header .logo {
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+#rankup header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rankup header ul li {
+    position: relative;
+    list-style: none;
+}
+
+#rankup header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+
+#rankup header.sticky {
+    background: #2d3436;
+    padding: 5px 2px;
+}
+#rankup header.sticky .logo {
+    color: #fff;
+    margin-left: 10px;
+}
+
+#rankup header.sticky ul li a {
+    color: #fff;
+    font-weight: 90;
+}
+
+#rankup header input[type="checkbox"] {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        background: none;
+    }   
+
+    #rankup header ul {
+        display: block;
+    }
+
+    #rankup header ul li {
+        list-style: initial;
+        margin-top: 50px;
+    }
+
+    #rankup header.sticky ul li a {
+        color: #000;
+    }
+
+    #rankup header ul li a {
+        color: #000;
+    }
+
+    #rankup header .control-nav {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      display: block;
+      width: 30px;
+      padding: 5px 0;
+      border: solid #fff;
+      border-width: 3px 0;
+      z-index: 2;
+      cursor: pointer;
+      transition: 0.6s;
+    }
+  
+    #rankup header .control-nav:before {
+      content: "";
+      display: block;
+      height: 3px;
+      background: #ffffff;
+      transition: 0.6s;
+    }
+  
+    #rankup header .control-nav-close {
+      position: fixed;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      z-index: 1;
+      background: rgba(0,0,0,0.4);
+      -webkit-transition: all 500ms ease;
+      transition: all 500ms ease;
+      -webkit-transform: translate(100%, 0);
+      -ms-transform: translate(100%, 0);
+      transform: translate(100%, 0);
+    }
+
+    #rankup header.sticky .control-nav {
+        position: absolute;
+      right: 20px;
+      top: 20px;
+      display: block;
+      width: 30px;
+      padding: 5px 0;
+      border: solid #fff;
+      border-width: 3px 0;
+      z-index: 2;
+    }
+
+    #rankup header.sticky .control-nav:before {
+        background: #fff;
+    }
+  
+    #rankup header nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 250px;
+      border-left: 1px solid #ccc;
+      background: #fff;
+      overflow-x: auto;
+      z-index: 2;
+      -webkit-transition: all 500ms ease;
+      transition: all 500ms ease;
+      -webkit-transform: translate(100%, 0);
+      -ms-transform: translate(100%, 0);
+      transform: translate(100%, 0);
+    }
+
+    #control-nav:checked ~ .control-nav-close {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+      
+      #control-nav:checked ~ nav {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+  }
+/* ////////// FIM NAVBAR \\\\\\\\\\ */
+
+/* ///////// INICIO \\\\\\\\\\ */
+#rankup {
+    background: #222222;
+}
+
+#rankup #inicio {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#rankup #inicio .bg_video{
+    position: fixed; 
+    right: 0; 
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto; 
+    z-index: -1000;
+    background: url(../video/bg.mp4) no-repeat;
+}
+
+#rankup #inicio .jumbotron {
+    color: #000;
+    background: none;
+    width: 80%;
+}
+
+#rankup #inicio .jumbotron h1 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+#rankup #inicio .jumbotron .card {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    background: none;
+    transition: 0.75s;
+}
+
+#rankup #inicio .jumbotron .card:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 1000px) {
+    #rankup #inicio .jumbotron h1 {
+        font-size: 20px;
+    }
+    #rankup #inicio .jumbotron .card {
+        margin-top: 30px;
+    }
+}
+/* ///////// FIM INICIO \\\\\\\\\\ */
+
+/* ///////// BANNER DOS JOGOS \\\\\\\\\\ */
+#rankup #banner {
+    width: 100%;
+    height: 65vh;
+    background: #000;
+    background-size: cover;
+}
+/* ///////// FIM BANNER DOS JOGOS \\\\\\\\\\ */
+
+/* ///////// CONTEUDO DOS JOGOS \\\\\\\\\\ */
+#rankup #conteudo {
+    width: 100%;
+    min-height: 100vh;
+    background: #1a1a1a;
+    position: relative;
+    bottom: 200px;
+}
+
+#rankup #conteudo .logo-jogo {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    position: relative;
+    bottom: 100px;
+}
+
+#rankup #conteudo .builds input {
+    border: 0;
+    background: #2d2d2d;
+    color: #fff;
+    width: 80%;
+    height: 50px;
+    outline: none;
+    margin: 20px 0px 20px 0px
+}
+
+#rankup #conteudo .builds .retangulo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background: #2d2d2d;
+}
+
+#rankup #conteudo .builds .retangulo img {
+    width: 120px;
+    height: 100%;
+    float: left;
+    border: 2px solid #2d2d2d;
+}
+
+#rankup #conteudo .builds .retangulo .infos {
+    margin: 15px 0px 0px 15px;
+    float: left;
+    width: 80%;
+} 
+
+#rankup #conteudo .builds .retangulo .infos h1 {
+    font-size: 25px;
+    color: #fff;
+}
+
+#rankup #conteudo .builds .retangulo .infos p {
+    font-size: 15px;
+    color: #5e5e5e;
+}
+
+#rankup #conteudo h1 {
+    color: #fff;
+}
+
+#rankup #conteudo .novoQuadrado {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 450px;
+    border: 5px dotted #6149a2;
+    margin-bottom: 15px;
+}
+
+#rankup #conteudo .novoQuadrado h1 {
+    color: #6149a2;
+    font-size: 150px;
+}
+
+#rankup #conteudo .quadradoNovo {
+    width: 45%;
+    height: 450px;
+    border: 5px solid #6149a2;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 1000px) {
+    #rankup #conteudo .builds input {
+        width: 100%;
+        height: 35px;
+    }
+    #rankup #conteudo .builds .retangulo {
+        width: 100%;
+        height: 75px;
+    }
+    #rankup #conteudo .builds .retangulo img {
+        width: 75px;
+    }
+    #rankup #conteudo .builds .retangulo .infos {
+        margin: 5px 0px 0px 0px;
+    }
+    #rankup #conteudo .builds .retangulo .infos h1 {
+        font-size: 15px;
+    }
+    #rankup #conteudo .builds .retangulo .infos p {
+        font-size: 10px;
+    }
+}
+/* ///////// FIM CONTEUDO DOS JOGOS \\\\\\\\\\ */
+
+/* ///////// CRIAR NOVA BUILD \\\\\\\\\\ */
+#rankup #nova-build {
+    min-height: 100vh;
+    margin-top: 150px;
+}
+
+#rankup #nova-build div {
+    padding: 15px;
+}
+
+#rankup #nova-build h1 {
+    color: #c2c2c2;
+}
+
+#rankup #nova-build h2 {
+    font-size: 25px;
+    color: #5f5f5f;
+}
+
+#rankup #nova-build .container {
+    background: #1a1a1a;
+    margin-bottom: 5px;
+}
+
+#rankup #nova-build input[type="text"] {
+    border: 2px solid #000;
+    background: #2d2d2d;
+    color: #c9c9c9;
+    width: 80%;
+    padding: 15px;
+    outline: none;
+    transition: 0.5s;
+}
+
+#rankup #nova-build input[type="text"]:focus {
+    border-color: #6149a2;
+    background: #15191a;
+}
+
+#rankup #nova-build input[type="radio"],
+#rankup #nova-build input[type="checkbox"] {
+    display:none;
+}
+
+#rankup #nova-build input[type="radio"] + label span,
+#rankup #nova-build input[type="checkbox"] + label span {
+    display:inline-block;
+    width:100px;
+    height:100px;
+    border: 2px solid  #000;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+    transition: 0.5s;
+}
+
+#rankup #nova-build input[type="radio"] + label span,
+#rankup #nova-build input[type="checkbox"] + label span {
+    background-size: cover;
+}
+
+#rankup #nova-build input[type="radio"]:checked + label span, 
+#rankup #nova-build input[type="checkbox"]:checked + label span {
+     border-color: #6149a2;
+}
+
+#rankup #nova-build .quadrado {
+    width: 100%;
+    min-height: 350px;
+    background: #2d2d2d;
+}
+
+#rankup #nova-build .quadrado .inputs {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#rankup #nova-build .quadrado .itens-selecionados .display {
+    display: none;
+}
+
+#rankup #nova-build .quadrado .itens-selecionados button {
+    width: 40%;
+    height: 25px;
+    background: #1a1a1a;
+    border: 1px solid #5f5f5f;
+    color: #fff;
+}
+
+#rankup #nova-build .quadrado .itens-selecionados input[type="radio"]:checked + label span, 
+#rankup #nova-build .quadrado .itens-selecionados input[type="checkbox"]:checked + label span {
+     border-color: #000;
+}
+
+#rankup #nova-build .itens .quadrado .itens-jogo {
+    margin: 5px;
+    width: 100%;
+    height: 400px;
+    background: #3a3a3a;
+    overflow-y: scroll;
+}
+
+#rankup #nova-build .itens .quadrado input[type ="number"] {
+    width: 160px;
+    list-style-position: inside;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    background: #15191a;
+}
+
+#rankup #nova-build .itens .quadrado img {
+    margin-top: 30px;
+}
+
+#rankup #nova-build .itens .quadrado .paladins {
+    width: 185px;
+    height: 100px;
+    margin: 5px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+#rankup #nova-build input[type="submit"] {
+    background: #2d2d2d;
+    border: 2px solid #6149a2;
+    color: #fff;
+    width: 150px;
+    height: 50px;
+}
+/* ///////// FIM CRIAR NOVA BUILD \\\\\\\\\\ */
+
+/* ///////// PAGINA DA BUILD \\\\\\\\\\ */
+#rankup .selecionados {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 1px;
+}
+
+#rankup .selecionados img {
+    width: 100px;
+    height: 100px;
+    margin: 15px;
+}
+/* ///////// FIM PAGINA DA BUILD \\\\\\\\\\ */
+
+/* ============================== FIM RANK UP ============================== */
+
+/* ////////// FOOTER \\\\\\\\\\ */
+#footer {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+    background: #2d3436;
+    color: #c9c9c9;
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+}
+
+#footer i {
+    color: #c9c9c9;
+    margin: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#footer i:hover {
+    color: #726fb3;
+}
+
+#footer hr {
+    border-color: #c9c9c9; 
+}
+
+#footer .empresas {
+    margin-bottom: 15px;
+}
+
+#footer .empresas a {
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    #footer {
+        min-height: 50vh;
+    }
+}
+/* ////////// FIM FOOTER \\\\\\\\\\ */

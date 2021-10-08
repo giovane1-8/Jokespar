@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Raleway&display=swap');
+
+/* ////////// BARRA DE ROLAGEM \\\\\\\\\\ */
+::-webkit-scrollbar-track {
+    background-color: #18181a;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #726fb3;
+    border-radius: 25px;
+}
+/* ////////// FIM BARRA DE ROLAGEM \\\\\\\\\\ */
+
+/* ============================== CONTA ============================== */
+/* ////////// NAVBAR LATERAL \\\\\\\\\\ */
+#conta #lateral {
+    height: 100vh;
+    width: 20%;
+    background: #111111; 
+    position: fixed; 
+    right: 0;
+} 
+
+#conta #lateral .conteudo {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#conta #lateral .conteudo .usuario {
+    width: 100%;
+    background: #272727;
+    color: #fff;
+    padding: 15px;
+}
+
+#conta #lateral .conteudo .usuario img {
+    border-radius: 50px;
+}
+
+#conta #lateral .conteudo nav ul {
+    list-style-type: "→";
+}
+
+#conta #lateral .conteudo nav ul li {
+    text-decoration: none;
+    color: #969696;
+    margin: 10px;
+}
+
+#conta #lateral .conteudo nav ul li a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: #aaaaaa;
+}
+
+#conta #lateral .conteudo .active {
+    color: #6149a2;
+    margin-left: 25px;
+}
+
+#conta #lateral .conteudo .active a {
+    color: #726fb3;
+}
+
+@media (max-width: 1000px) {
+    #conta #lateral {
+        display: none;
+    } 
+}
+/* ////////// FIM NAVBAR LATERAL \\\\\\\\\\ */
+
+/* ////////// NAVBAR MOBILE \\\\\\\\\\ */
+#conta .mobile ul {
+    display: block;
+    color: #969696;
+    position: fixed;
+}
+
+#conta .mobile ul li {
+    list-style-type: "→";
+    margin-top: 50px;
+}
+
+#conta .mobile .active a {
+    color: #726fb3;
+}
+
+#conta .mobile ul li a {
+    color: #969696;
+    margin: 5px;
+    text-decoration: none;
+}
+
+#conta .mobile ul li .dropdown button {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 50%;
+}
+
+#conta .mobile .control-nav {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: block;
+  width: 30px;
+  padding: 5px 0;
+  border: solid #18181a;
+  border-width: 3px 0;
+  z-index: 2;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+#conta .mobile .control-nav:before {
+  content: "";
+  display: block;
+  height: 3px;
+  background: #18181a;
+  transition: 0.6s;
+}
+
+#conta .mobile .control-nav-close {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  z-index: 1;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  -webkit-transform: translate(100%, 0);
+  -ms-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+}
+
+#conta .mobile.sticky .control-nav {
+    position: absolute;
+  right: 20px;
+  top: 20px;
+  display: block;
+  width: 30px;
+  padding: 5px 0;
+  border: solid #18181a;
+  border-width: 3px 0;
+  z-index: 2;
+}
+
+#conta .mobile.sticky .control-nav:before {
+    background: #18181a;
+}
+
+#conta .mobile nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 250px;
+  background: #18181a;
+  overflow-x: auto;
+  z-index: 2;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  -webkit-transform: translate(100%, 0);
+  -ms-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+}
+
+#control-nav:checked ~ .control-nav-close {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  
+  #control-nav:checked ~ nav {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+   transform: translate(0, 0);
+}
+
+#conta .mobile .usuario {
+    width: 100%;
+    background: #272727;
+    color: #fff;
+    padding: 15px;
+}
+
+#conta .mobile .usuario img {
+    border-radius: 50px;
+}
+
+@media (min-width: 1000px) {
+    #conta #mobile {
+        display: none;
+    } 
+}
+/* ////////// FIM NAVBAR MOBILE \\\\\\\\\\ */
+
+/* ////////// FORMULARIO \\\\\\\\\\ */
+#conta {
+    background: #e7e7e7;
+}
+
+#conta h1 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+#conta .formulario {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#conta .formulario .form-group label {
+    font-family: 'Bebas Neue', cursive;
+}
+
+#conta .formulario .form-group input {
+    border: 2px solid #969696; 
+    padding: 5px;
+    border-radius: 5px;
+    width: 80%;
+    outline: none;
+    transition: 0.25s;
+}
+
+#conta .formulario .form-group input:focus {
+    border-color: #6149a2;
+}
+
+#conta .formulario input[type="submit"] {
+    border: 0;
+    padding: 10px;
+    background: #6149a2;
+    color: #fff;
+    width: 80%;
+    border-radius: 10px;
+}
+
+@media (max-width: 1000px) {
+    #conta .formulario {
+        min-height: 90vh;
+    }
+    #conta .formulario .form-group input,
+    #conta .formulario input[type="submit"] {
+        width: 100%;
+    } 
+}
+/* ////////// FIM FORMULARIO \\\\\\\\\\ */
+/* ============================== FIM CONTA ============================== */
