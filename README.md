@@ -1,1 +1,1 @@
-# Jokespar - Meu projeto de TCC para o curso de tecnico de Informatica para Intenet
+# Jokespar - Meu projeto de TCC para o curso tecnico de Informatica para Intenet
